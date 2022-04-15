@@ -1,13 +1,16 @@
 MAKEFLAGS += --silent
 
 build:
-	npx parcel build public/index.html
+	npm run build
 
-build-index:
+build-watch:
 	pug -w src -o public --pretty
 
 launch:
-	npx parcel ./public/index.html
+	npm start
 
 analysis:
 	npx parcel build public/index.html --reporter @parcel/reporter-bundle-analyzer
+
+clean:
+	rm -rf dist

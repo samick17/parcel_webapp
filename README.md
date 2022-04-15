@@ -1,5 +1,10 @@
 # CodeBase of web app (Parcel)
 
+## To development
+
+ - make build-watch
+ - make launch
+
 ## Steps
 
 1. Create the project
@@ -101,3 +106,5 @@ public/index.html
 ## Reference
 
  - https://parceljs.org/getting-started/webapp/
+ - https://parceljs.org/features/development/
+ - https://parceljs.org/features/production/
