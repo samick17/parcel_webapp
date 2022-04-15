@@ -8,7 +8,7 @@
     "start": "parcel",
     "build": "parcel build"
   },
-  "author": "Samick",
+  "author": "",
   "license": "",
   "devDependencies": {
     "@parcel/compressor-brotli": "^2.4.1",
