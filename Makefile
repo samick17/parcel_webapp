@@ -10,7 +10,8 @@ launch:
 	npm start
 
 analysis:
-	npx parcel build public/index.html --reporter @parcel/reporter-bundle-analyzer
+	npm run analysis
 
 clean:
 	rm -rf dist
+	rm -rf parcel-bundle-reports
