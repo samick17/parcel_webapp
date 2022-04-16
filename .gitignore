@@ -4,4 +4,4 @@ dist
 node_modules
 parcel-bundle-reports
 package-lock.json
-public/index.html
+src/index.html

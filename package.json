@@ -2,10 +2,10 @@
   "name": "parcel_webapp",
   "version": "1.0.0",
   "description": "",
-  "source": "public/index.html",
+  "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel --https",
+    "start": "parcel",
     "build": "parcel build --no-content-hash"
   },
   "author": "",
