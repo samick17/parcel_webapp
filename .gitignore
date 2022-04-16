@@ -2,6 +2,6 @@
 .parcel-cache
 dist
 node_modules
-parcel-bundle-reports
+parcel-bundle-reports*
 package-lock.json
 src/index.html
