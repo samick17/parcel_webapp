@@ -7,49 +7,52 @@ class SignInFormElement extends HTMLElement {
           SignIn
         </div>
         <div class="form_item">
-          <input role='name' placeholder='ID or Email'/>
+          <input placeholder='ID or Email'/>
         </div>
         <div class="form_item">
-          <input role='password' placeholder='Password' type='password'/>
+          <input placeholder='Password' type='password'/>
         </div>
+        <!-- div class="form_item">
+          <input placeholder='Password Confirm' type='password'/>
+        </div -->
         <div class="form_item">
-          <button role='signin'>SignIn</button>
+          <button role='signin' disabled='true'>SignIn</button>
         </div>
       </div>
     </div>`;
-    const nameRef = this.querySelector('input[role="name"]');
-    console.log(nameRef);
+    const data = {
+      id: '',
+      pwd: '',
+    };
+
+    // console.log(this.querySelector('.form .form_item:nth-child(2) input'));
+    const nameRef = this.querySelector('.form .form_item:nth-child(2) input');
     nameRef.addEventListener('keyup', (e) => {
-      console.log('[Name]', e.target.value);
+      updateSubmitStatus();
     });
-    const pwdRef = this.querySelector('input[role="password"]');
-    console.log(pwdRef);
+    // console.log(this.querySelector('.form .form_item:nth-child(3) input'));
+    const pwdRef = this.querySelector('.form .form_item:nth-child(3) input');
     pwdRef.addEventListener('keyup', (e) => {
-      console.log('[PWD]', e.target.value);
+      updateSubmitStatus();
     });
-    /**/
+
     const signInRef = this.querySelector('button[role="signin"]');
-    signInRef.addEventListener('click', (e) => {
-      const id = nameRef.value;
-      const pwd = pwdRef.value;
-      // TODO HTTP Request
-      const xhr = new XMLHttpRequest();
-      xhr.addEventListener('readystatechange', (e) => {
-        console.log('-readystatechange-', xhr.readyState);
-        if(xhr.readyState === XMLHttpRequest.DONE) {
-          console.log('Done!');
-          console.log(e, xhr);
-        }
-      });
-      const payload = JSON.stringify({
-        id: id,
-        pwd: pwd,
-      });
-      xhr.open('POST', 'http://localhost:8000/api/v1/signin');
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.send(payload);
-      // console.log('[SignIn]', nameRef.value, pwdRef.value);
+    signInRef.addEventListener('click', () => {
+      console.log('SignIn', nameRef.value, pwdRef.value);
     });
+    function canSubmit() {
+      return !!nameRef.value && !!pwdRef.value;
+    }
+    function updateSubmitStatus() {
+      if(canSubmit()) {
+        signInRef.removeAttribute('disabled');
+      } else {
+        signInRef.setAttribute('disabled', 'true');
+      }
+      // console.log(!canSubmit());
+      // signInRef.setAttribute('disabled', (!canSubmit()).toString());
+    }
+    
   }
 
 }
