@@ -14,4 +14,4 @@ analysis:
 
 clean:
 	rm -rf dist
-	rm -rf parcel-bundle-reports
+	rm -rf parcel-bundle-reports*
