@@ -5,6 +5,64 @@
  - make build-watch
  - make launch
 
+## Steps - React
+
+1. Install React Modules
+
+```shell=
+npm i react react-dom --save
+```
+
+2. Create app entry point
+
+src/app_react.js
+```javascript
+import ReactDOM from 'react-dom/client';
+import Entry from './react_components/Entry';
+
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<Entry/>);
+
+```
+
+3. Create Entry.jsx
+
+src/react_components/Entry.jsx
+
+```jsx
+import React from 'react';
+
+class AppComponent extends React.Component {
+
+  render() {
+    return <React.Fragment>
+      <div className='app_header'/>
+      <div className='app_body'>
+        <div>asdf</div>
+      </div>
+    </React.Fragment>
+  }
+
+}
+
+export default AppComponent;
+```
+
+4. Change the index.pug or index.html
+
+index.pug
+```pug
+doctype! html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title App1
+        link(rel='stylesheet' href='styles.css')
+        script(type='module' src='app_react.js')
+    body
+        #root
+```
+
 ## Steps
 
 1. Create the project
