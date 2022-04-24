@@ -7,7 +7,5 @@
       "@parcel/compressor-brotli"
     ]
   },
-  "optimizers": {
-    "*.{jpg,jpeg,png}": []
-  }
+  "namers": ["parcel-namer-custom", "..."],
 }

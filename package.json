@@ -12,14 +12,20 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "@parcel/compressor-brotli": "^2.4.1",
-    "@parcel/compressor-gzip": "^2.4.1",
-    "@parcel/core": "^2.4.1",
-    "@parcel/reporter-bundle-analyzer": "^2.4.1",
-    "parcel": "^2.4.1"
+    "@parcel/compressor-brotli": "^2.5.0",
+    "@parcel/compressor-gzip": "^2.5.0",
+    "@parcel/core": "^2.5.0",
+    "@parcel/reporter-bundle-analyzer": "^2.5.0",
+    "@parcel/transformer-raw": "^2.5.0",
+    "parcel": "^2.5.0",
+    "parcel-namer-custom": "^0.2.0"
   },
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "parcel-namer-custom": {
+    ".jpeg": "[folder]/[name].[ext]",
+    ".png": "[folder]/[name].[ext]"
   }
 }
