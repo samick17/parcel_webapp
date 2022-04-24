@@ -1,4 +1,5 @@
 import React from 'react';
+import Content from './Content.jsx';
 
 class AppComponent extends React.Component {
 
@@ -6,7 +7,7 @@ class AppComponent extends React.Component {
     return <React.Fragment>
       <div className='app_header'/>
       <div className='app_body'>
-        <div>asdf</div>
+        <Content/>
       </div>
     </React.Fragment>
   }
