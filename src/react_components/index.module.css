@@ -3,13 +3,17 @@
     height:  calc(100vh + 48px);
 	margin: 12px 0;
     display: flex;
-    
+}
+.container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
 }
 .content {
-	margin: auto;
-    grid-template-columns: repeat(4, 25%);
+	margin: 0 auto;
     display: grid;
-    grid-template-rows: 25%;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: min-content;
     grid-gap: 12px
 }
 .item_wrapper {

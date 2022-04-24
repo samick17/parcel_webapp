@@ -11,15 +11,17 @@ class Content extends React.Component {
 
 	render() {
 		return <div className={Styles.wrapper}>
-			<div className={Styles.content}>
-			{
-				WallpaperItems.map((item, index) => {
-					return <ImageItem
-						key={index}
-						item={item}
-					/>
-				})
-			}
+			<div className={Styles.container}>
+				<div className={Styles.content}>
+				{
+					WallpaperItems.map((item, index) => {
+						return <ImageItem
+							key={index}
+							item={item}
+						/>
+					})
+				}
+				</div>
 			</div>
 		</div>
 	}
