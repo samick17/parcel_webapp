@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './index.module.css';
 
 class ImageItem extends React.Component {
 
@@ -6,13 +7,23 @@ class ImageItem extends React.Component {
 		const {
 			item,
 		} = this.props;
-		return <div style={{float:'left',padding:'2'}}>
+		return <div className={Styles.item_wrapper}>
 			<img
-				src={item.url}
+				src={item.thumbnail}
 			/>
-			<div style={{backgroundColor:'rgba(0, 0, 0, .25)'}}>
-				<div>{item.resolution}</div>
-				<div>{item.tags.join(', ')}</div>
+			<div className={Styles.item_info}>
+				<div className={Styles.item_info_rating}>
+					{item.rating}
+				</div>
+				{item.resolution}
+				<div className={Styles.item_info_downloads}>
+					{item.downloads}
+				</div>
+			</div>
+			<div className={Styles.item_info}>
+				<div className={Styles.item_info_tags}>
+					{item.tags.join(', ')}
+				</div>
 			</div>
 		</div>
 	}

@@ -16,6 +16,7 @@ body {
 	width: 100%;
 	height: calc(100% - 64px);
 	background-color: #EEEEEE;
+	overflow: auto;
 }
 .form_wrapper {
 	width: 100%;

@@ -1,0 +1,40 @@
+.wrapper {
+	width: 100%;
+    height:  calc(100vh + 48px);
+	margin: 12px 0;
+    display: flex;
+    
+}
+.content {
+	margin: auto;
+    grid-template-columns: repeat(4, 25%);
+    display: grid;
+    grid-template-rows: 25%;
+    grid-gap: 12px
+}
+.item_wrapper {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+}
+.item_wrapper img {
+    object-fit: cover;
+    width: 100%;
+}
+.item_info {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.item_info:nth-child(2) {
+	border-bottom: 1px solid #EEEEEE;
+}
+.item_info_rating {
+    float: left;
+}
+.item_info_downloads {
+    float: right;
+}
+.item_info_tags {
+    text-align: center;
+}
