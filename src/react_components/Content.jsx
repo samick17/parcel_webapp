@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './index.module.css';
+import * as Styles from './index.module.css';
 import ImageItem from './ImageItem.jsx';
 import WallpaperItems from '../dataset/wallpaperscraft.js';
 
