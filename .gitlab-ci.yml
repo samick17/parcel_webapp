@@ -1,0 +1,16 @@
+image: node:16.15.0
+
+pages:
+  cache:
+    paths:
+      - node_modules
+  script:
+    - npm install -g pug-cli
+    - pug template -o src --pretty
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

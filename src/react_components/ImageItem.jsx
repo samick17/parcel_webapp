@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './index.module.css';
+import * as Styles from './index.module.css';
 
 class ImageItem extends React.Component {
 
