@@ -1,9 +1,9 @@
 class AppHeader extends HTMLElement {
 
 	connectedCallback() {
-    	this.innerHTML = `<div class="app_header">
-    		<div class="app_title">App Title</div>
-    	</div>`;
+		this.innerHTML = `<div class="app_header">
+			<div class="app_title">App Title</div>
+		</div>`;
 	}
 
 }

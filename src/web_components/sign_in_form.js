@@ -2,23 +2,23 @@ class SignInFormElement extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `<div class="form_wrapper">
-      <div class="form">
+      <form class="form">
         <div class="form_item">
           SignIn
         </div>
         <div class="form_item">
-          <input placeholder='ID or Email'/>
+          <input autocomplete='username' placeholder='ID or Email'/>
         </div>
         <div class="form_item">
-          <input placeholder='Password' type='password'/>
+          <input autocomplete='new-password' placeholder='Password' type='password'/>
         </div>
         <!-- div class="form_item">
-          <input placeholder='Password Confirm' type='password'/>
+          <input autocomplete='new-password' placeholder='Password Confirm' type='password'/>
         </div -->
         <div class="form_item">
           <button role='signin' disabled='true'>SignIn</button>
         </div>
-      </div>
+      </form>
     </div>`;
     const data = {
       id: '',
